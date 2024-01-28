@@ -24,7 +24,17 @@ const loop = setInterval(() => {
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
 
+        document.querySelector('.game-over').style.display = 'block';
+
         clearInterval(loop);
+
+        const clouds = document.querySelector('.clouds');
+        clouds.style.animation = 'none';
+
+        clouds.style.position = 'absolute';
+        clouds.style.left = '50%';
+        clouds.style.top = '50%';
+        clouds.style.transform = 'translate(-50%, -50%)';
     } 
     
 }, 10);
